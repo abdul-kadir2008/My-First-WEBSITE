@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+    <h2>Book Information System</h2>
+     <pre>#include <stdio.h>
+struct Book { char title[50]; char author[30]; float price; };
+
+void inputBook(struct Book *b) {
+    printf("Enter Title: "); scanf("%s", b->title);
+    printf("Enter Author: "); scanf("%s", b->author);
+    printf("Enter Price: "); scanf("%f", &b->price);
+}
+
+void displayBook(struct Book *b) { printf("Book: %s | Author: %s | Price: %.2f\n", b->title, b->author, b->price); }
+
+int main() {
+    struct Book b;
+    inputBook(&b);
+    displayBook(&b);
+    return 0;
+}
+
+    </pre>
+<button><a href="index.html">HOME</a></button>
+</body>
+</html>

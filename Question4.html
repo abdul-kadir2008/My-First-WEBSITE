@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+    <h2>Bank Account System</h2>
+     <pre>#include <stdio.h>
+struct Account { int accNo; float balance; };
+
+void createAccount(struct Account *a, int accNo, float balance) { a->accNo = accNo; a->balance = balance; }
+
+void deposit(struct Account *a, float amt) { a->balance += amt; printf("Deposited %.2f | New Balance: %.2f\n", amt, a->balance); }
+
+void withdraw(struct Account *a, float amt) {
+    if(amt <= a->balance){ a->balance -= amt; printf("Withdrawn %.2f | Remaining Balance: %.2f\n", amt, a->balance); }
+    else { printf("Insufficient balance!\n"); }
+}
+
+int main() {
+    struct Account a;
+    createAccount(&a, 12345, 5000);
+    deposit(&a, 1000);
+    withdraw(&a, 3000);
+    return 0;
+}
+
+    </pre>
+<button><a href="index.html">HOME</a></button>
+</body>
+</html>
