@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+    <a href="index.html">HOME</a>
+    <h2>Student Marks System</h2>
+  <p>#include <stdio.h><br>
+struct Student { int marks; };<br>
+
+void initStudent(struct Student *s, int marks) { s->marks = marks; }<br>
+
+void calculateAverage(struct Student *s) {<br>
+    printf("Total marks after bonus: %d\n", s->marks + 10);<br>
+}<br>
+
+void resetStudent(struct Student *s) { s->marks = 100; printf("Student reset!\n"); }<br>
+
+int main() {<br>
+    struct Student s;<br>
+    initStudent(&s, 70);
+    calculateAverage(&s);<br>
+    resetStudent(&s);<br>
+    calculateAverage(&s);<br>
+    return 0;<br>
+}
+</p>
+</body>
+</html>

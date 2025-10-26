@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+    <a href="index.html">HOME</a>
+    <h2>Employee Salary System</h2>
+   <p>#include <stdio.h><br>
+struct Employee { int id; float salary; };<br>
+
+void initEmployee(struct Employee *e, int id, float salary) { e->id = id; e->salary = salary; }<br>
+
+void giveBonus(struct Employee *e, float bonus) {<br>
+    e->salary += bonus;<br>
+    printf("New Salary: %.2f\n", e->salary);<br>
+}<br>
+
+void display(struct Employee *e) { printf("Employee ID: %d | Salary: %.2f\n", e->id, e->salary); }<br>
+
+int main() {<br>
+    struct Employee e;<br>
+    initEmployee(&e, 101, 25000);<br>
+    display(&e);<br>
+    giveBonus(&e, 5000);<br>
+    return 0;<br>
+}<br>
+</p>
+  </body>
+</html>

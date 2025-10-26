@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+</head>
+<body>
+    <a href="index.html">HOME</a>
+    <h2>Rectangle Area & Perimeter</h2>
+     <p>#include <stdio.h><br>
+struct Rectangle { int length, breadth; };<br>
+
+void initRectangle(struct Rectangle *r, int l, int b) { r->length = l; r->breadth = b; }<br>
+
+int area(struct Rectangle *r) { return r->length * r->breadth; }<br>
+int perimeter(struct Rectangle *r) { return 2 * (r->length + r->breadth); }<br>
+int main() {<br>
+    struct Rectangle r;<br>
+    initRectangle(&r, 10, 5);<br>
+    printf("Area: %d\n", area(&r));<br>
+    printf("Perimeter: %d\n", perimeter(&r));<br>
+    return 0;<br>
+}<br>
+</p>
+</body>
+</html>
